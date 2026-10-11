@@ -1,0 +1,157 @@
+/* ---------- Colour variables (light theme) ---------- */
+:root {
+  --bg: #f4f6f8;
+  --text: #222222;
+  --card-bg: #ffffff;
+  --border: #cccccc;
+  --header-bg: #8e0000;
+  --header-text: #ffffff;
+  --accent: #0ba184;
+  --accent-hover: #088a70;
+  --muted: #777777;
+  --warning-color: #e67e00;
+  --over-color: #d00000;
+}
+
+/* ---------- Dark theme: only redefine the variables ---------- */
+body.dark {
+  --bg: #121417;
+  --text: #e8e8e8;
+  --card-bg: #1e2227;
+  --border: #444b55;
+  --header-bg: #4a0000;
+  --header-text: #ffffff;
+  --accent: #14b898;
+  --accent-hover: #3fd0b2;
+  --muted: #9aa3ad;
+  --warning-color: #ffa94d;
+  --over-color: #ff6b6b;
+}
+
+/* ---------- Reset and base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 20px 24px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* ---------- Main card ---------- */
+main {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- Counters ---------- */
+#char-count,
+#word-count {
+  margin: 8px 0 0;
+}
+
+#word-count {
+  color: var(--muted);
+}
+
+.warning {
+  color: var(--warning-color);
+}
+
+/* .over comes after .warning so red wins if both classes are present */
+.over {
+  color: var(--over-color);
+  font-weight: bold;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+#clear-btn {
+  margin-top: 16px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 16px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  header {
+    padding: 14px 12px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+}

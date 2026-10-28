@@ -1,0 +1,7 @@
+# Reflection
+
+**The most difficult concept.** For me the hardest idea was caching, and the problem of old data that comes with it. At first I could not see why a cache could ever be bad, because it only makes things faster. It finally clicked when I worked on the TicketHub seat map: a seat can look free in the cache after someone has already taken it. I overcame this by drawing the request flow on paper, one step at a time, and by asking "what new problem does this part create?" after every component I added. Writing the SQL for the double-booking rule also helped, because I could run it myself and see that only one of 100 buyers won.
+
+**What I would improve.** Based on the feedback on my capstone, I would improve my architecture document. It explained each component, but it was missing a goals and non-goals section, a list of alternatives I considered, and a risks section. I would also show the request in the Network tab during my demo, so people can see the status codes, and I would practise explaining one trade-off aloud in under a minute.
+
+**What I will learn next.** I want to build a real backend with Node.js and Express and connect it to a PostgreSQL database, so that my API design becomes working code instead of a document. After that, I would like to learn React to build bigger interfaces, and keep practising system design with questions like "why must app servers be stateless?" so the ideas become natural.
